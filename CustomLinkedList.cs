@@ -30,7 +30,7 @@ namespace CustomLinkedList
             Last = newNode;
             
         }
-        public IEnumerable<T> GetEnumerableDESC(T item)
+        public IEnumerable GetEnumerableDESC()
         {
             Current = Last;
             while(Current != null)
@@ -50,12 +50,12 @@ namespace CustomLinkedList
         }
         //IEnumerator IEnumerable.GetEnumerator()
         //{
-        //    Current = First;
-        //    while(Current != null)
+        //   Current = First;
+        //    while(Current.Next != null)
         //    {
-        //        if(Current.Value == null)
-        //            yield break;
+        //        Current = Current.Next;
         //    }
-        //}
+        //    yield return Current.Next = Last;
+        //}                        
     }
 }
